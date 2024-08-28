@@ -13,25 +13,53 @@
             <div class="form-title">Login</div>
             <form action="#" method="POST" >
                 <label for="age">Age</label>
-                <input type="number" id="age" name="age" required placeholder="age">
-
-                <label for="job">Job</label>
-                <input type="text" id="job" name="job"required placeholder="job" >
-
-                <p>contact communication type</p>
+                <input type="number" id="age" name="age" min="18" max="200" placeholder="age" required>
+                
+                 <div>Job</div>
+                <input list="job" name="job-list" required >
+                <datalist id="job">
+                  <option value="admin">admin</option>
+                  <option value="blue-collar">blue-collar</option>
+                  <option value="technician">technician</option>
+                  <option value="services">services</option>
+                  <option value="management">management</option>
+                  <option value="retired">retired</option>
+                  <option value="entrepreneur">entrepreneur</option>
+                  <option value="self-employed">self-employed</option>
+                  <option value="housemaid">housemaid</option>
+                  <option value="unemployed">unemployed</option>
+                  <option value="student">student</option>
+                  <option value="unknown">unknown</option>
+                </datalist>
+                
+                <p>Martial</p>
                 <div>  <label for="married">married</label>
                 <input type="radio" id="married" name="marital" value="married" required>
                
                  <label for="single">single</label>
                 <input type="radio" id="single" name="marital" value="single" required>
+                 
+                <label for="divorced">divorced</label>
+                <input type="radio" id="divorced" name="marital" value="divorced" required>
                 
                   </div>
               <br>
 
-                <label for="education">Education</label>
-                <input type="text" id="education" name="education"required placeholder="education">
+              <div>Education</div>
+              <input list="edu" name="education" required >
+              <datalist id="edu">
+                <option value="university.degree">university.degree</option>
+                <option value="high.school">high.school</option>
+                <option value="technician">technician</option>
+                <option value="basic.9y">basic.9y</option>
+                <option value="professional.course">professional.course</option>
+                <option value="basic.4y">basic.4y</option>
+                <option value="basic.6y">basic.6y</option>
+                <option value="illiterate">illiterate</option>
+                <option value="unknown">unknown</option>
+              </datalist>
 
-                <p>Has credit in default?</p>
+                <p>Have you credit in default?</p>
                 <div>  <label for="yes">yes</label>
                 <input type="radio" id="yes" name="default" value="yes" required >
                
@@ -44,7 +72,7 @@
               <br>
 
                
-              <p>Has housing loan? </p>
+              <p>Have you housing loan? </p>
               <div>  <label for="yes">yes</label>
               <input type="radio" id="yes" name="housing" value="yes" required >
              
@@ -57,7 +85,7 @@
             <br>
 
 
-            <p>Has personal loan? </p>
+            <p>Have you personal loan? </p>
             <div>  <label for="yes">yes</label>
             <input type="radio" id="yes" name="loan" value="yes" required >
            
@@ -79,11 +107,34 @@
                   </div>
               <br>
 
-                <label for="month">Month</label>
-                <input type="month" id="month" name="month"placeholder="last contact month of year"required>
-
-                <label for="day_of_year">Day of Year</label>
-                <input type="date" id="day_of_year" name="day_of_year"placeholder="last contact day of the week"required>
+                
+                <div>Last contact Month_of_year</div>
+              <input list="month_of_year" name="month" required >
+              <datalist id="month_of_year">
+                <option value="jan">jan</option>
+                <option value="feb">feb</option>
+                <option value="mar">mar</option>
+                <option value="apr">apr</option>
+                <option value="may">may</option>
+                <option value="jun">jun</option>
+                <option value="jul">jul</option>
+                <option value="aug">aug</option>
+                <option value="sep">sep</option>
+                <option value="oct">oct</option>
+                <option value="nov">nov</option>
+                <option value="dec">dec</option>
+              </datalist>
+              
+              
+              <div>Last contact Day_of_week</div>
+              <input list="day_of_year" name="day" required >
+              <datalist id="day_of_year">
+                <option value="thu">thu</option>
+                <option value="mon">mon</option>
+                <option value="wed">wed</option>
+                <option value="tue">tue</option>
+                <option value="fri">fri</option>
+              </datalist>
 
                 <button type="submit" >Submit</button>
             </form>
