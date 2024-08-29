@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #e67e22;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        p {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #e67e22;
+            margin-bottom: 20px;
+            font-size: 5rem;
+        }
+        .button-container {
+            display: flex;
+            width: 17rem;
+            flex-direction: row;
+            justify-content: space-between;
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #000000;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #14232c;
+        }
+        .about {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            margin: 20px auto;
+            max-width: 600px; /* Adjust width as needed */
+            height: auto; /* Allow height to grow based on content */
+        }
+        .about h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        .collaborator {
+            margin: 10px 0;
+        }
+        .collaborator a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .collaborator a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Bank Classifer</h1>
+        <p>this AI tool is used to predict how likely does someone have a deposit in their bank!</p>
+        <div class="button-container">
+            <a href="/form/" class="button">Go to Form</a>
+            <a href="#about" class="button">About Us</a>
+        </div>
+    </div>
+    <div id="about" class="about">
+        <h2>About Our Team</h2>
+        <div class="collaborator">
+            <strong>Ahmed Osama Elrefai:</strong> 
+            <a href="https://github.com/ahmed-elrefai" target="_blank">github.com/ahmed-elrefai</a>
+        </div>
+        <div class="collaborator">
+            <strong>Ehab Mahmoud Ali:</strong> 
+            <a href="https://github.com/EhabMahmoudAli" target="_blank">github.com/EhabMahmoudAli</a>
+        </div>
+        <div class="collaborator">
+            <strong>Ahmed Amr Elsabagh:</strong> 
+            <a href="https://github.com/Ahmed-amr59" target="_blank">github.com/Ahmed-amr59</a>
+        </div>
+        <div class="collaborator">
+            <strong>Tajeldin Abdelwahid Othman:</strong> 
+            <a href="https://github.com/expygmalion" target="_blank">github.com/expygmalion</a>
+        </div>
+    </div>
+</body>
+</html>

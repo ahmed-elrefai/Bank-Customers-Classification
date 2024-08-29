@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Deposit prediction</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+      <div class="description">
+        <h2>Banking AI Services</h2>
+        <p>fill the form to get a prediction on how likely do you have a deposit in the bank!
+          If you encounter any issues, please contact our support team.</p>
+      </div>
+        <div class="login-form">
+            <div class="form-title">Data Form</div>
+            <form action="result/" method="POST">
+              {% csrf_token %}
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required placeholder="age">
+
+                <label for="job">Job</label>
+                <select id="job" name="job" required>
+                    <option value="-1">Unknown</option>
+                    <option value="0">Student</option>
+                    <option value="1">Unemployed</option>
+                    <option value="2">Housemaid</option>
+                    <option value="3">Self-employed</option>
+                    <option value="4">Entrepreneur</option>
+                    <option value="5">Retired</option>
+                    <option value="6">Management</option>
+                    <option value="7">Services</option>
+                    <option value="8">Technician</option>
+                    <option value="9">Blue-collar</option>
+                    <option value="10">Admin</option>
+                </select>
+
+                <p>Marital Status</p>
+                <div class="radio-group">
+                    <label for="married">Married</label>
+                    <input type="radio" id="married" name="marital" value="2" required>
+                    <label for="single">Single</label>
+                    <input type="radio" id="single" name="marital" value="1" required>
+                    <label for="divorced">Divorced</label>
+                    <input type="radio" id="divorced" name="marital" value="0" required>
+                    <label for="unknown">Unknown</label>
+                    <input type="radio" id="unknown" name="marital" value="-1" required>
+                </div>
+
+                <label for="education">Education</label>
+                <select id="education" name="education" required>
+                    <option value="7">University Degree</option>
+                    <option value="6">High School</option>
+                    <option value="5">Basic 9y</option>
+                    <option value="4">Professional Course</option>
+                    <option value="3">Basic 4y</option>
+                    <option value="2">Basic 6y</option>
+                    <option value="1">Unknown</option>
+                    <option value="0">Illiterate</option>
+                </select>
+
+                <p>Has credit in default?</p>
+                <div class="radio-group">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="yes" name="default" value="1" required>
+                    <label for="no">No</label>
+                    <input type="radio" id="no" name="default" value="0" required>
+                    <label for="unknown-default">Unknown</label>
+                    <input type="radio" id="unknown-default" name="default" value="-1" required>
+                </div>
+
+                <p>Has housing loan?</p>
+                <div class="radio-group">
+                    <label for="yes-housing">Yes</label>
+                    <input type="radio" id="yes-housing" name="housing" value="1" required>
+                    <label for="no-housing">No</label>
+                    <input type="radio" id="no-housing" name="housing" value="0" required>
+                    <label for="unknown-housing">Unknown</label>
+                    <input type="radio" id="unknown-housing" name="housing" value="-1" required>
+                </div>
+
+                <p>Has personal loan?</p>
+                <div class="radio-group">
+                    <label for="yes-loan">Yes</label>
+                    <input type="radio" id="yes-loan" name="loan" value="1" required>
+                    <label for="no-loan">No</label>
+                    <input type="radio" id="no-loan" name="loan" value="0" required>
+                    <label for="unknown-loan">Unknown</label>
+                    <input type="radio" id="unknown-loan" name="loan" value="-1" required>
+                </div>
+
+                <p>Contact communication type</p>
+                <div class="radio-group">
+                    <label for="telephone">Telephone</label>
+                    <input type="radio" id="telephone" name="contact" value="0" required>
+                    <label for="cellular">Cellular</label>
+                    <input type="radio" id="cellular" name="contact" value="1" required>
+                </div>
+
+                <label for="month">Month</label>
+                <select id="month" name="month" required>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+
+                <label for="day_of_week">Day of Week</label>
+                <select id="week-day" name="week-day" required>
+                    <option value="4">Monday</option>
+                    <option value="5">Tuesday</option>
+                    <option value="6">Wednesday</option>
+                    <option value="7">Thursday</option>
+                    <option value="1">Friday</option>
+                    <option value="2">Saturday</option>
+                    <option value="3">Sunday</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
