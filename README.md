@@ -1,7 +1,7 @@
-# Bank-Customers-Classification
 
-Sure! Below is a structured README file for your Padawin Bank Web Project, presented in Markdown format:
+
 # Padawin Bank Web Project
+# Bank-Customers-Classification
 
 ## Overview
 
@@ -144,7 +144,7 @@ Survey Page (index2.html)
     &lt;script src=&quot;survey.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-
+```
 Custom Fonts
 
 Petrona: Custom serif font used for main text.
@@ -152,29 +152,25 @@ Inter: Custom sans-serif font used for accent text.
 
 Font Files:
 
-Petrona.ttf: Located at C:\Projects\BankingWebAi\css\fonts\Petrona.ttf
-Inter.ttf: Located at C:\Projects\BankingWebAi\css\fonts\Inter.ttf
+Petrona.ttf: Located at css\fonts\Petrona.ttf
+Inter.ttf: Located at css\fonts\Inter.ttf
 
-Gradients
+## Gradients
 
 Background Gradient: radial-gradient(circle at center, #1E0033, #4e0086)
 Header Gradient: radial-gradient(circle at center, #FF69B4)
 CTA Button Gradient: linear-gradient(to left, #FF69B4, #4e0086)
 
-JavaScript
+## JavaScript
+```
 The survey page uses survey.js for managing form interactions. Ensure this file is included in your project.
 // Example function to navigate between survey questions
 function nextQuestion(currentId, nextId) {
     document.getElementById(currentId).style.display = &#39;none&#39;;
     document.getElementById(nextId).style.display = &#39;block&#39;;
 }
+```
+## Contribution
 
-Contribution
-Feel free to contribute to this project by submitting issues or pull requests. Ensure that all code adheres to the existing style guidelines and performs necessary testing.
-License
 This project is licensed under the MIT License - see the LICENSE file for details.
 Contact
-For any questions or feedback, please contact [your email] or create an issue in this repository.
-
-You can copy and paste this Markdown content directly into your README file. Feel free to customize it further as needed!
-
