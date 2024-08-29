@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padawin Bank Survey</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <h1>Padawin Bank Survey</h1>
+    </header>
+    <main>
+        <form id="survey-form">
+            <div class="question" id="q1">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="200" required>
+                <button type="button" onclick="nextQuestion('q1', 'q2')">Next</button>
+            </div>
+
+            <div class="question" id="q2" style="display:none;">
+                <label for="job">Job:</label>
+                <input list="job" name="job-list" required>
+                <datalist id="job">
+                    <option value="admin">admin</option>
+                    <option value="blue-collar">blue-collar</option>
+                    <option value="technician">technician</option>
+                    <option value="services">services</option>
+                    <option value="management">management</option>
+                    <option value="retired">retired</option>
+                    <option value="entrepreneur">entrepreneur</option>
+                    <option value="self-employed">self-employed</option>
+                    <option value="housemaid">housemaid</option>
+                    <option value="unemployed">unemployed</option>
+                    <option value="student">student</option>
+                    <option value="unknown">unknown</option>
+                </datalist>
+                <button type="button" onclick="nextQuestion('q2', 'q3')">Next</button>
+            </div>
+
+            <div class="question" id="q3" style="display:none;">
+                <p>Marital Status:</p>
+                <div>
+                    <label for="married">married</label>
+                    <input type="radio" id="married" name="marital" value="married" required>
+                    <label for="single">single</label>
+                    <input type="radio" id="single" name="marital" value="single" required>
+                    <label for="divorced">divorced</label>
+                    <input type="radio" id="divorced" name="marital" value="divorced" required>
+                </div>
+                <button type="button" onclick="nextQuestion('q3', 'q4')">Next</button>
+            </div>
+
+            <div class="question" id="q4" style="display:none;">
+                <label for="education">Education:</label>
+                <input list="edu" name="education" required>
+                <datalist id="edu">
+                    <option value="university.degree">university.degree</option>
+                    <option value="high.school">high.school</option>
+                    <option value="technician">technician</option>
+                    <option value="basic.9y">basic.9y</option>
+                    <option value="professional.course">professional.course</option>
+                    <option value="basic.4y">basic.4y</option>
+                    <option value="basic.6y">basic.6y</option>
+                    <option value="illiterate">illiterate</option>
+                    <option value="unknown">unknown</option>
+                </datalist>
+                <button type="button" onclick="nextQuestion('q4', 'q5')">Next</button>
+            </div>
+
+            <div class="question" id="q5" style="display:none;">
+                <p>Have you experienced any credit defaults in the past?</p>
+                <div>
+                    <label for="yes-default">yes</label>
+                    <input type="radio" id="yes-default" name="default" value="yes" required>
+                    <label for="no-default">no</label>
+                    <input type="radio" id="no-default" name="default" value="no" required>
+                    <label for="unknown-default">unknown</label>
+                    <input type="radio" id="unknown-default" name="default" value="unknown" required>
+                </div>
+                <button type="button" onclick="nextQuestion('q5', 'q6')">Next</button>
+            </div>
+
+            <div class="question" id="q6" style="display:none;">
+                <p>Do you have an active housing plan?</p>
+                <div>
+                    <label for="yes-housing">yes</label>
+                    <input type="radio" id="yes-housing" name="housing" value="yes" required>
+                    <label for="no-housing">no</label>
+                    <input type="radio" id="no-housing" name="housing" value="no" required>
+                    <label for="unknown-housing">unknown</label>
+                    <input type="radio" id="unknown-housing" name="housing" value="unknown" required>
+                </div>
+                <button type="button" onclick="nextQuestion('q6', 'q7')">Next</button>
+            </div>
+
+            <div class="question" id="q7" style="display:none;">
+                <p>Do you currently have any personal loans?</p>
+                <div>
+                    <label for="yes-loan">yes</label>
+                    <input type="radio" id="yes-loan" name="loan" value="yes" required>
+                    <label for="no-loan">no</label>
+                    <input type="radio" id="no-loan" name="loan" value="no" required>
+                    <label for="unknown-loan">unknown</label>
+                    <input type="radio" id="unknown-loan" name="loan" value="unknown" required>
+                </div>
+                <button type="button" onclick="nextQuestion('q7', 'q8')">Next</button>
+            </div>
+
+            <div class="question" id="q8" style="display:none;">
+                <p>Contact communication type:</p>
+                <div>
+                    <label for="telephone">telephone</label>
+                    <input type="radio" id="telephone" name="contact" value="telephone" required>
+                    <label for="cellular">cellular</label>
+                    <input type="radio" id="cellular" name="contact" value="cellular" required>
+                </div>
+                <button type="button" onclick="nextQuestion('q8', 'q9')">Next</button>
+            </div>
+
+            <div class="question" id="q9" style="display:none;">
+                <label for="month">Last contact Month_of_year:</label>
+                <input list="month_of_year" name="month" required>
+                <datalist id="month_of_year">
+                    <option value="jan">jan</option>
+                    <option value="feb">feb</option>
+                    <option value="mar">mar</option>
+                    <option value="apr">apr</option>
+                    <option value="may">may</option>
+                    <option value="jun">jun</option>
+                    <option value="jul">jul</option>
+                    <option value="aug">aug</option>
+                    <option value="sep">sep</option>
+                    <option value="oct">oct</option>
+                    <option value="nov">nov</option>
+                    <option value="dec">dec</option>
+                </datalist>
+                <button type="button" onclick="nextQuestion('q9', 'q10')">Next</button>
+            </div>
+
+            <div class="question" id="q10" style="display:none;">
+                <label for="day">Last contact Day_of_week:</label>
+                <input list="day_of_year" name="day" required>
+                <datalist id="day_of_year">
+                    <option value="thu">thu</option>
+                    <option value="mon">mon</option>
+                    <option value="wed">wed</option>
+                    <option value="tue">tue</option>
+                    <option value="fri">fri</option>
+                </datalist>
+                <button type="button" onclick="nextQuestion('q10', 'thank-you')">Next</button>
+            </div>
+
+            <div class="question" id="thank-you" style="display:none;">
+                <h2>Thank You!</h2>
+                <p>We appreciate your participation in our survey.</p>
+            </div>
+        </form>
+    </main>
+    <script src="survey.js"></script>
+</body>
+</html>
