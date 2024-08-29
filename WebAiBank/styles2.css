@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Petrona';
-    src: url(\css\fonts\Petrona.ttf) format('truetype');
+    src: url(fonts\Petrona.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url(\css\fonts\Inter.ttf) format('truetype');
+    src: url(fonts\Inter.ttf) format('truetype');
 }
 
 :root {
