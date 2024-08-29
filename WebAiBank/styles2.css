@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Petrona';
+    src: url(\css\fonts\Petrona.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(\css\fonts\Inter.ttf) format('truetype');
+}
+
+:root {
+    --primary-color: #4B0082;
+    --secondary-color: #FF69B4;
+    --text-color: #FFFFFF;
+    --background-color: #1E0033;
+    --font-main: 'Petrona', sans-serif; 
+    --font-accent: 'Inter', serif;
+    --background-gradient: radial-gradient(circle at center, #1E0033, #4e0086); /* Background gradient for body */
+    --header-gradient: radial-gradient(circle at center, #FF69B4,); /* Gradient for header */
+    --cta-button-gradient: linear-gradient(to left, #FF69B4, #4e0086); /* Gradient for CTA button */
+
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--background-gradient);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: var(--header-gradient);
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-color);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Optional: subtle border */
+}
+
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.2); /* Adjusted for readability */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+}
+
+.question {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.3); /* Subtle gradient background for inputs */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border to match background */
+    border-radius: 4px; /* Rounded corners */
+}
+
+button {
+    background: var(--cta-button-gradient);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+}
+
+#thank-you {
+    text-align: center;
+}
+
+#thank-you h2 {
+    background: var(--header-gradient);
+    -webkit-background-clip: text; /* Clipping the gradient to text */
+    -webkit-text-fill-color: transparent; /* Making text color transparent */
+    color: transparent; /* Fallback for non-WebKit browsers */
+    margin: 0;
+}
