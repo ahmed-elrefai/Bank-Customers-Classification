@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Petrona';
-    src: url(C:\Projects\BankingWebAi\css\fonts\Petrona.ttf) format('truetype');
+    src: url(\fonts\Petrona.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url(C:\Projects\BankingWebAi\css\fonts\Inter.ttf) format('truetype');
+    src: url(\fonts\Inter.ttf) format('truetype');
 }
 
 :root {
